@@ -1,8 +1,8 @@
 // app/page.tsx
 "use client";
+import { ChatContainer } from "@/components/chat/chat-container";
 import { Layout } from "@/components/layout";
 import { useSession } from "next-auth/react";
-// import { ChatContainer } from "@/components/chat/chat-container";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <Layout>
       <h1>Chat container</h1>
-      {/* <ChatContainer /> */}
+      <ChatContainer />
     </Layout>
   );
 }
