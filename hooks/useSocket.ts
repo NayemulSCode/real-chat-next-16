@@ -11,7 +11,7 @@ export const useSocket = (room: string) => {
     useChatStore();
 
   useEffect(() => {
-    if (!session) return;
+    if (!session || socketRef.current) return;
 
     // Initialize socket connection with the correct path
     socketRef.current = io("http://localhost:3000", {
